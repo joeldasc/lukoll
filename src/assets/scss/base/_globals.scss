@@ -1,0 +1,153 @@
+body {
+    min-height: 100vh;
+    background: $grayThin;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.deskt-none {
+    display: none;
+    @include minw(tb) {
+        display: block;
+    }
+}
+
+.mob-none {
+    @include minw(tb) {
+        display: none;
+    }
+}
+
+.lukoll {
+    &__container {
+        width: 100%;
+        max-width: 1400px;
+        margin: auto;
+        padding: 0 15px;
+    }
+    &__title {
+        font-family: $avenirNextBold;
+        font-size: 22px;
+        line-height: 26px;
+        color: $grayBold;
+        text-transform: uppercase;
+        @include minw(tb) {
+            font-size: 24px;
+        }
+    }
+    &__excert {
+        font-family: $avenirNextRegular;
+        font-size: 16px;
+        line-height: 19px;
+        color: $grayBold;
+    }
+    &__form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 36px;
+    }
+    &__btn {
+        border: 0;
+        background: $blueLight;
+        text-transform: uppercase;
+        color: $white;
+        font-family: $avenirNextRegular;
+        font-size: 16px;
+        border-radius: 25px;
+        max-width: 280px;
+        width: 100%;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all .3s;
+        &:focus,
+        &:active {
+            outline: none;
+        }
+        &:hover {
+            @include minw(tb) {
+                color: $blueLight;
+                border: 2px solid $blueLight;
+                background: $white;
+            }
+        }
+    }
+}
+
+input,
+select,
+textarea {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid $blue;
+    outline: none;
+    resize: none;
+    display: block;
+    font-family: $avenirNextRegular;
+    width: 100%;
+    font-size: 14px;
+    line-height: 17px;
+    color: $grayBold;
+    padding-bottom: 5px;
+    position: relative;
+    transition: all .3s;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+    }
+    &:focus { 
+        border-bottom: 1px solid $blueLight;
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    background-image: url('#{$url-images}/arrow-down.svg');
+    background-size: 15px;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+label {
+    font-family: $avenirNextRegular;
+    font-size: 16px;
+    line-height: 19px;
+    color: $grayBold;
+    margin-bottom: 8px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $grayBold;
+  -webkit-box-shadow: 0 0 0px 1000px $white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}

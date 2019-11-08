@@ -1,0 +1,42 @@
+.lukoll {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 40px 0;
+    }
+    &__logo {
+        margin-bottom: 38px;
+        img {
+            margin: auto;
+            max-width: 150px;
+            @include minw(tb) {
+                max-width: 100%;
+            }
+        }
+    }
+    &__title {
+        margin: 0 0 42px;
+    }
+    &__excert {
+        margin: 27px 0 0;
+        a {
+            color: $blueLight;
+        }
+    }
+    &__form {
+        width: 100%;
+        max-width: 310px;
+        margin: 0 auto;
+        background: $white;
+        box-shadow: 0px 0px 10px rgba($black, 0.07);
+        border-radius: 25px;
+        padding: 50px 34px;
+        @include minw(tb) {
+            padding: 68px 54px;
+            max-width: 390px;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.lukoll {
+    &__header {
+        background: $white;
+        padding: 20px 0;
+        .content {
+            display: flex;
+            align-items: center;
+        }
+        .lukoll__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            margin-right: 25px;
+        }
+        &__hamburger .line {
+            width: 30px;
+            height: 2px;
+            background-color: $blueLight;
+            display: block;
+            margin: 3px auto;
+            transition: all 0.3s ease-in-out;
+        }
+        &__hamburger {
+            &.active .line:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+            &.active .line:nth-child(2) {
+                opacity: 0;
+            }
+            &.active .line:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+        &__logo img {
+            max-width: 120px;
+        }
+        &__logout a {
+            font-family: $avenirNextRegular;
+            font-size: 13px;
+            color: $grayBold;
+            text-transform: uppercase;
+        }
+    }
+}
