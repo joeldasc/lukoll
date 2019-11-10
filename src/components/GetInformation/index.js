@@ -1,28 +1,24 @@
-import React, { Component, Fragment } from 'react';
-
-import Header from '../Header';
-import SidebarMenu from '../SidebarMenu';
+import React, { Component } from 'react';
 
 class GetInformation extends Component {
-    state = {
-        activeHamburger: false,
-    }
-    toggleHamburger = () => {
-        const {  activeHamburger } = this.state;
-
-        this.setState({
-            activeHamburger: !activeHamburger
-        });
-    }
     render() {
-        const { activeHamburger } = this.state;
         return(
-            <Fragment>
-                <Header toggleMenu={ this.toggleHamburger } activeMenu={ activeHamburger }/>
-                <main>
-                    <SidebarMenu activeMenu={ activeHamburger }/>
-                </main>
-            </Fragment>
+            <div className="lukoll__content lukoll__getinf">
+                <div className="lukoll__container">
+                    <h1 className="lukoll__title">Obtener información</h1>
+                    <div className="lukoll__grid">
+                        <div className="lukoll__grid__col lukoll__grid__col-6">
+                            <h2 className="lukoll__sub-title">Exactus</h2>
+                        </div>
+                        <div className="lukoll__grid__col lukoll__grid__col-6">
+                            <h2 className="lukoll__sub-title">Elvis</h2>
+                        </div>
+                        <div className="lukoll__grid__col lukoll__grid__col-12">
+                            <h2 className="lukoll__sub-title">Historial</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
         );
     }
 }

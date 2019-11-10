@@ -1,12 +1,10 @@
 import React from 'react';
 import Router from './components/Router';
 
-function App() {
-  return (
+const App = () => (
 	<div className="lukoll">
 		<Router />
 	</div>
-  );
-}
-
+);
 export default App;
+

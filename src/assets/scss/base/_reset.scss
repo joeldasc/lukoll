@@ -5,6 +5,12 @@
 body {
     position: relative;
     overflow-x: hidden;
+    min-height: 100vh;
+    background: $grayThin;
+}
+
+a {
+    text-decoration: none;
 }
 
 img {

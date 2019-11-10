@@ -7,12 +7,15 @@ import Register from './Register';
 import GetInformation from './GetInformation';
 import GenerateFile from './GenerateFile';
 import GrillsNoteSouth from './GrillsNoteSouth';
+import Main from './Main';
+import Footer from './Footer';
 import Error from './Error';
 
 class Router extends Component {
     render() {
         return(
             <BrowserRouter>
+                <Main/>
                 <Switch>
                     <Route exact path="/inicia-sesion" component={ Login }/>
                     <Route exact path="/registrate" component={ Register }/>
@@ -21,6 +24,7 @@ class Router extends Component {
                     <Route exact path="/parrillas-norte-sur" component={ GrillsNoteSouth }/>
                     <Route component={ Error }/>
                 </Switch>
+                <Footer/>
             </BrowserRouter>
         );
     }

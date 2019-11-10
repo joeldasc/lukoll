@@ -8,10 +8,9 @@ import Logo from '../../assets/img/logo.png';
 import iconLogout from '../../assets/img/icons/icon-logout.svg';
 
 class Header extends Component {
-    
+
     render() {
         const { toggleMenu, activeMenu } = this.props;
-        
         return(
             <header className="lukoll__header">
                 <div className="lukoll__container">

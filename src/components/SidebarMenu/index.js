@@ -11,8 +11,7 @@ import iconLogout from '../../assets/img/icons/icon-logout.svg';
 
 class SidebarMenu extends Component {
     render() {
-        const { activeMenu } = this.props;
-
+        const { activeMenu, removeActiveHamburger } = this.props;
         return(
             <aside className={ classnames('lukoll__sidebar', { 'active': activeMenu })}>
                 <div className="lukoll__sidebar__user">
@@ -27,20 +26,22 @@ class SidebarMenu extends Component {
                         <NavLink
                             to={ '/obtener-informacion' }
                             exact
+                            onClick={ removeActiveHamburger }
                             activeClassName="active"
                         >
                             <img src={ iconWebsite } alt="obtener información"/>
-                            <span className="deskt-none">Obtener información</span>
+                            <span>Obtener información</span>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink
                             to={ '/generar-archivo' }
                             exact
+                            onClick={ removeActiveHamburger }
                             activeClassName="active"
                         >
                             <img src={ iconResume } alt="obtener información"/>
-                            <span className="deskt-none">Generar Archivo</span>
+                            <span>Generar Archivo</span>
                         </NavLink>
                     </li>
                     <li>
@@ -48,18 +49,16 @@ class SidebarMenu extends Component {
                             to={ '/parrillas-norte-sur' }
                             exact
                             activeClassName="active"
+                            onClick={ removeActiveHamburger }
                         >
                             <img src={ iconTable } alt="Parrillas norte y sur"/>
-                            <span className="deskt-none">Parrillas norte y sur</span>
+                            <span>Parrillas norte y sur</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink
-                            to={ '/' }
-                            exact
-                        >
+                        <NavLink to={ '/' } exact>
                             <img src={ iconLogout } alt="Cerrar sesión"/>
-                            <span className="deskt-none">Cerrar sesión</span>
+                            <span>Cerrar sesión</span>
                         </NavLink>
                     </li>
                 </ul>
